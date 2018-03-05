@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<psalm
+  useDocblockTypes="true"
+  requireVoidReturnType="false"
+  useAssertForType="true"
+>
+    <projectFiles>
+        <directory name="lib" />
+        <ignoreFiles>
+            <file name="lib/PhpParser/Parser/Php5.php" />
+            <file name="lib/PhpParser/Parser/Php7.php" />
+        </ignoreFiles>
+    </projectFiles>
+    <issueHandlers>
+        <MissingReturnType errorLevel="info">
+            <errorLevel type="suppress">
+                <file name="lib/PhpParser/PrettyPrinter/Standard.php" />
+            </errorLevel>
+        </MissingReturnType>
+        <NullArgument errorLevel="info">
+            <errorLevel type="suppress">
+                <file name="lib/PhpParser/PrettyPrinter/Standard.php" />
+            </errorLevel>
+        </NullArgument>
+        <MissingClosureReturnType errorLevel="suppress" />
+        <MissingClosureParamType errorLevel="suppress" />
+        <MissingPropertyType errorLevel="suppress">
+            <errorLevel type="info">
+                <directory name="lib/PhpParser/Node" />
+            </errorLevel>
+        </MissingPropertyType>
+        <NullOperand errorLevel="suppress" />
+        <PossiblyNullOperand errorLevel="suppress" />
+        <MethodSignatureMismatch errorLevel="suppress" />
+        <NoInterfaceProperties errorLevel="suppress" />
+        <ImplicitToStringCast errorLevel="suppress" />
+        <MissingConstructor errorLevel="suppress" />
+        <InvalidReturnType errorLevel="suppress">
+            <errorLevel type="error">
+                <file name="lib/PhpParser/NodeVisitor.php" />
+            </errorLevel>
+        </InvalidReturnType>
+        <TypeDoesNotContainType>
+            <errorLevel type="suppress">
+                <file name="lib/PhpParser/PrettyPrinterAbstract.php" />
+            </errorLevel>
+        </TypeDoesNotContainType>
+        <PropertyNotSetInConstructor>
+            <errorLevel type="suppress">
+                <file name="lib/PhpParser/ParserAbstract.php" />
+            </errorLevel>
+        </PropertyNotSetInConstructor>
+
+        <UnusedMethod>
+            <errorLevel type="suppress">
+                <file name="lib/PhpParser/PrettyPrinter/Standard.php" />
+                <file name="lib/PhpParser/BuilderFactory.php" />
+                <file name="lib/PhpParser/ParserAbstract.php" />
+                <directory name="lib/PhpParser/Builder" />
+            </errorLevel>
+        </UnusedMethod>
+
+        <UnusedVariable>
+            <errorLevel type="suppress">
+                <file name="lib/PhpParser/Parser/Php5.php" />
+                <file name="lib/PhpParser/Parser/Php7.php" />
+            </errorLevel>
+        </UnusedVariable>
+    </issueHandlers>
+</psalm>

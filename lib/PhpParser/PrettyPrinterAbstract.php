@@ -109,8 +109,8 @@ abstract class PrettyPrinterAbstract
     /** @var bool[] Map determining whether a certain character is a label character */
     protected $labelCharMap;
     /**
-     * @var int[][] Map from token classes and subnode names to FIXUP_* constants. This is used
-     *              during format-preserving prints to place additional parens/braces if necessary.
+     * @var int[][]|null Map from token classes and subnode names to FIXUP_* constants. This is used
+     *                   during format-preserving prints to place additional parens/braces if necessary.
      */
     protected $fixupMap;
     /**

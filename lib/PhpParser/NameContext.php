@@ -250,6 +250,9 @@ class NameContext
         return null;
     }
 
+    /**
+     * @return Name|null
+     */
     private function getNamespaceRelativeName(string $name, string $lcName, int $type) {
         if (null === $this->namespace) {
             return new Name($name);
